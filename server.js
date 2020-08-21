@@ -4,6 +4,8 @@ const app = express();
 
 connectDB();
 app.use(express.json({ extended: false }));
+
+app.use("/api/movieModel", require("./Api/Movie"));
 app.use("/api/movieModel", require("./Api/Movie"));
 app.use("/api/movieModel", require("./Api/Movie"));
 const Port = process.env.Port || 3000;
